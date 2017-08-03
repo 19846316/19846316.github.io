@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>红包抽抽抽</title>
+</head>
+ 
+<body>
+请确定您的选择： <br />
+<br />
+<input name="radio1" type="radio" value="谢谢惠顾">A.猜中有惊喜<br />
+<input name="radio1" type="radio" value="谢谢惠顾">B.猜中有惊喜<br />
+<input name="radio1" type="radio" value="谢谢惠顾">C.猜中有惊喜<br />
+<input name="radio1" type="radio" value="红包">D.猜中有惊喜<br />
+<br />
+<input type="button" onClick="checks()" value="提交">
+<script>
+	var boolean = true;
+    function checks()
+    {
+        var radios=document.getElementsByName("radio1");
+        if(boolean){
+            boolean = false;
+
+        for(var i=0;i<radios.length-1;i++)
+        {
+            if(radios[i].checked==true)
+            {
+                alert("很遗憾您未中奖："+radios[i].value);
+            };
+          	
+        };
+           if(radios[3].checked==true)
+            {
+                alert("恭喜您中奖啦："+radios[3].value);
+            };
+        }else{
+        	alert("您已经选过了")
+        }
+            
+            
+    }
+
+</script>
+</body>
+</html>
